@@ -1,0 +1,78 @@
+@import 'color/colorPalette';
+//
+// Variables
+// --------------------------------------------------
+
+
+//== Colors
+
+// color palettes
+@blue-1: color(~`colorPalette("@{blue-6}", 1)`);
+@blue-2: color(~`colorPalette("@{blue-6}", 2)`);
+@blue-3: color(~`colorPalette("@{blue-6}", 3)`);
+@blue-4: color(~`colorPalette("@{blue-6}", 4)`);
+@blue-5: color(~`colorPalette("@{blue-6}", 5)`);
+@blue-6: #05419D;
+@blue-7: color(~`colorPalette("@{blue-6}", 7)`);
+@blue-8: color(~`colorPalette("@{blue-6}", 8)`);
+@blue-9: color(~`colorPalette("@{blue-6}", 9)`);
+@blue-10: color(~`colorPalette("@{blue-6}", 10)`);
+
+@base-color				: @blue-6;
+@primary-color          : @blue-6;
+@highlight-color        : #37BF8B;
+@delete-color           : #FF5152;
+@warning-color          : @delete-color;
+@y-icon-color           : #FFB461;
+@r-icon-color           : #FF5152;
+@bg-color           	: #F5F5F5;
+@pick-color          	: @highlight-color ;
+@error-color            : @delete-color;
+@white            		: #fff;
+@black 					: #000;
+@gray-color				: #f9f9f9;
+// == Scaffolding
+// //
+// //## Settings for some of the most global styles.
+
+// //** Background color for `<body>`.
+@body-bg:               #fff;
+@text-gray-color:       rgba(0, 0, 0, 0.65);
+// //** Global text color on `<body>`.
+@text-color:            #000000;
+@tab-color: 			#9B9B9B;
+// //** Global textual link color.
+@link-color:            #419EE7;
+// //** Link hover color set via `darken()` function.
+@link-hover-color:      darken(@link-color, 15%);
+// //** Link hover decoration.
+@link-hover-decoration: underline;
+@border-light-color			:#F5F5F5;
+@border-color:#D5D5D5;
+//== Typography
+//
+//## Font, line-height, and color for body text, headings, and more.
+
+// @font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif;
+// @font-family-serif:       Georgia, "Times New Roman", Times, serif;
+// //** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
+// @font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
+@font-family            : -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+@font-size-sm         	: 12px;
+@font-size-base         : 14px;
+@font-size-md           : @font-size-base + 2px;
+@font-size-lg           : @font-size-md  + 2px;
+@font-size-highlight 	: 24px;
+@line-height-base       : 1.5;
+@border-radius-base     : 4px;
+@border-radius-sm       : 2px;
+
+
+
+//icon  style
+@icon-gray 				: #9B9B9B;
+
+
+
+
