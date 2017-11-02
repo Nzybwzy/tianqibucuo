@@ -17,13 +17,12 @@ class MainContainer extends React.Component {
             <Layout style={{position: "absolute", width: "100%", height: "100%"}}>
                   <Header style={{color: "#fff"}}>Header</Header>
                   <Layout>
-                    <Sider>
+                    <Sider style={{overflowY: "auto"}}>
                         <Menu
                             defaultSelectedKeys={['1']}
                             defaultOpenKeys={['sub1']}
                             mode="inline"
                             theme="dark"
-                            // inlineCollapsed={this.state.collapsed}
                         >
                             <Menu.Item key="1">
                             <Icon type="pie-chart" />
