@@ -74,7 +74,7 @@ const get = (url, query = {}, options) => {
     
     defaultOpt.headers = completeHeader(defaultOpt.headers);
     
-    return fetch(url.replace(/^\/api/, '/nchr') + (!_.isEmpty(query) ? `?${qs.stringify(query)}` : ''), defaultOpt).then(checkStatus).then(parseJSON);
+    return fetch(url.replace(/^\/api/, '/api') + (!_.isEmpty(query) ? `?${qs.stringify(query)}` : ''), defaultOpt).then(checkStatus).then(parseJSON);
 };
 
 const post = (url, data = {}, options, isAuth = false) => {
@@ -95,7 +95,7 @@ const post = (url, data = {}, options, isAuth = false) => {
     
     defaultOpt.headers = completeHeader(defaultOpt.headers);
     
-    return fetch(url.replace(/^\/api/, '/nchr'), defaultOpt).then(checkStatus).then(parseJSON);
+    return fetch(url.replace(/^\/api/, '/api'), defaultOpt).then(checkStatus).then(parseJSON);
 };
 
 
@@ -109,7 +109,7 @@ const put = (url, data, options) => {
     
     defaultOpt.headers = completeHeader(defaultOpt.headers);
     
-    return fetch(url.replace(/^\/api/, '/nchr'), defaultOpt).then(checkStatus).then(parseJSON);
+    return fetch(url.replace(/^\/api/, '/api'), defaultOpt).then(checkStatus).then(parseJSON);
 };
 
 const del = (url, data = {}, options) => {
@@ -123,7 +123,7 @@ const del = (url, data = {}, options) => {
     
     defaultOpt.headers = completeHeader(defaultOpt.headers);
     
-    return fetch(url.replace(/^\/api/, '/nchr'), defaultOpt).then(checkStatus).then(parseJSON);
+    return fetch(url.replace(/^\/api/, '/api'), defaultOpt).then(checkStatus).then(parseJSON);
 };
 
 const patch = (url, data, options) => {
@@ -136,7 +136,7 @@ const patch = (url, data, options) => {
     
     defaultOpt.headers = completeHeader(defaultOpt.headers);
     
-    return fetch(url.replace(/^\/api/, '/nchr'), defaultOpt).then(checkStatus).then(parseJSON);
+    return fetch(url.replace(/^\/api/, '/api'), defaultOpt).then(checkStatus).then(parseJSON);
 };
 
 const postFormData = (url, data, options) => {
@@ -158,7 +158,7 @@ const postFormData = (url, data, options) => {
     
     delete defaultOpt.headers['Content-Type'];
     
-    return fetch(url.replace(/^\/api/, '/nchr'), defaultOpt).then(checkStatus).then(parseJSON);
+    return fetch(url.replace(/^\/api/, '/api'), defaultOpt).then(checkStatus).then(parseJSON);
 };
 
 export default {

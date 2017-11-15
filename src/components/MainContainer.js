@@ -2,16 +2,45 @@
  * 
  */
 import React from 'react';
-import { Layout, Menu, Icon } from 'antd';
+import { Layout, Menu, Icon, Select, Collapse } from 'antd';
+const Option = Select.Option;
+const Panel = Collapse.Panel;
 const { Header, Footer, Sider, Content } = Layout;
 const SubMenu = Menu.SubMenu;
 import { connect } from 'dva';
 import l from './MainContainer.less';
 import cx from 'classnames';
+import { 
+   getData
+} from '../services/common';
+
 class MainContainer extends React.Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            data: []
+        }
+    }
+    componentDidMount() {
+        getData()
+        .then(data => {
+          this.setState({
+            data: data.people
+          })
+        })
+        .catch(data => {
+           this.setState({
+            data: data.people
+          })
+        })
+    }
+    handleChange = () => {
+
+    }
     render() {
-        const {children, params, location} = this.props;
-        // 
+        const { children, params, location } = this.props;
+        const { data } = this.state;
+        console.log(data)
         return (
             <div className={l.main}>
             <Layout style={{position: "absolute", width: "100%", height: "100%"}}>
@@ -52,7 +81,20 @@ class MainContainer extends React.Component {
                           </SubMenu>
                         </Menu>
                     </Sider>
-                    <Content>Content</Content>
+                    <Content>
+                        <Collapse defaultActiveKey={['0']}>
+                            {
+                                data && data.length && data.map((item, index) => {
+                                    return(
+                                        <Panel header={item.firstName} key={index}>
+                                          <p>lastName: {item.lastName}, email: {item.email}</p>
+                                        </Panel>
+                                    )
+                                })
+                            }
+                           
+                          </Collapse>
+                    </Content>
                   </Layout>
                   <Footer>Footer</Footer>
                 </Layout>

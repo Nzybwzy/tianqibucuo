@@ -19,10 +19,10 @@ module.exports = {
     },
     "publicPath": "/",
     "proxy"     : {
-        "/nchr"  : {
-            "target"      : `http://http://mail.wzybnzy.cn/`,
+        "/api"  : {
+            "target"      : `http://mail.wzybnzy.cn`,
             "changeOrigin": true,
-            "pathRewrite" : {"^/nchr": ""}
+            "pathRewrite" : {"^/api": ""}
         }
     },
     "theme"     : {
