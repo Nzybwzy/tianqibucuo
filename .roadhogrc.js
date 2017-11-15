@@ -20,7 +20,7 @@ module.exports = {
     "publicPath": "/",
     "proxy"     : {
         "/nchr"  : {
-            "target"      : `http://nchr.release.microfastup.com/nchr/`,
+            "target"      : `http://http://mail.wzybnzy.cn/`,
             "changeOrigin": true,
             "pathRewrite" : {"^/nchr": ""}
         }
