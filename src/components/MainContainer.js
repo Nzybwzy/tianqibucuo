@@ -24,14 +24,18 @@ class MainContainer extends React.Component {
     componentDidMount() {
         getData()
         .then(data => {
-          this.setState({
-            data: data.people
-          })
+          // this.setState({
+          //   data: data.people
+          // })
+        }, err => {
+            this.setState({
+                data: err.people
+            })
         })
         .catch(data => {
-           this.setState({
-            data: data.people
-          })
+          //  this.setState({
+          //   data: data.people
+          // })
         })
     }
     handleChange = () => {
