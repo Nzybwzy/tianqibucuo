@@ -6,3 +6,4 @@ import * as Constants from '../constants/Constants';
 export const updatebaseinfo = (data) => {
     return fetch.post('/api/enterprise/updbaseinfo', data, {}, true);
 };
+aaaaaaaaaaaaaaaaaaaaa
