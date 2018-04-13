@@ -20,7 +20,7 @@ module.exports = {
     "publicPath": "/",
     "proxy"     : {
         "/api"  : {
-            "target"      : `http://mail.wzybnzy.cn`,
+            "target"      : `http://animate.wzybnzy.cn`,
             "changeOrigin": true,
             "pathRewrite" : {"^/api": ""}
         }
