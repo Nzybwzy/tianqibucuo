@@ -11,8 +11,8 @@ let {platform} = process;
 process.chdir(__dirname);
 
 let command = [
-    `SET PORT=${config.server.port + 1} && roadhog server`,
-    `PORT=${config.server.port + 1} roadhog server`
+    `SET PORT=${config.server.port + 2} && roadhog server`,
+    `PORT=${config.server.port + 2} roadhog server`
 ];
 
 platform = platform === 'win32' ? platform = 0 : platform = 1;
