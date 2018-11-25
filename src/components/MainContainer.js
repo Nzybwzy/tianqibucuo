@@ -24,10 +24,12 @@ class MainContainer extends React.Component {
     componentDidMount() {
         getData()
         .then(data => {
+            console.log(data)
           // this.setState({
           //   data: data.people
           // })
         }, err => {
+            console.log(err)
             this.setState({
                 data: err.people
             })
